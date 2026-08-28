@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SS FFA Deathmatch</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts for premium look -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Outfit:wght@500;700&display=swap"
+        rel="stylesheet">
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Arena Selection Menu -->
+    <div id="menu-container" class="hidden">
+        <div class="menu-glass">
+            <div class="menu-header">
+                <h1>SELECT ARENA</h1>
+                <p>Choose your battleground</p>
+            </div>
+            <div class="menu-content-split">
+                <!-- Left: Arenas -->
+                <div class="arena-section">
+                    <div id="arena-list" class="arena-list">
+                        <!-- Arena cards injected here via JS -->
+                    </div>
+                </div>
+
+                <!-- Right: Leaderboard -->
+                <div class="leaderboard-section">
+                    <h2><i class="fa-solid fa-trophy"></i> TOP 10 PLAYERS</h2>
+                    <div class="leaderboard-header-row">
+                        <span class="l-rank">#</span>
+                        <span class="l-name">Name</span>
+                        <span class="l-stat">K</span>
+                        <span class="l-stat">D</span>
+                        <span class="l-stat">K/D</span>
+                    </div>
+                    <div id="leaderboard-list" class="leaderboard-list">
+                        <!-- Leaderboard injected here via JS -->
+                    </div>
+                </div>
+            </div>
+            <div class="menu-footer">
+                <button id="close-btn" class="close-btn">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Player HUD -->
+    <div id="hud-container" class="hidden">
+        <div class="hud-glass">
+            <div class="hud-stats">
+                <div class="stat-box">
+                    <span class="stat-label">KILLS</span>
+                    <span class="stat-value" id="hud-kills">0</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-label">DEATHS</span>
+                    <span class="stat-value" id="hud-deaths">0</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-label">K/D</span>
+                    <span class="stat-value" id="hud-kd">0.00</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-label">STREAK</span>
+                    <span class="stat-value streak" id="hud-streak">0</span>
+                </div>
+            </div>
+
+            <div class="hud-footer">
+                <span id="hud-leave-cmd">Type /quitdm to leave</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
