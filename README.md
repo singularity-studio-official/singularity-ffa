@@ -48,3 +48,5 @@ The `config.lua` file gives you total control over the script. You can edit:
 
 ## Editing Arena Boundaries
 Boundaries use `lib.zones.poly`. You can add as many `vec3(x, y, z)` coordinates as you like into the `points` array for an arena to draw incredibly complex, custom-shaped borders. If a player steps outside the border, they will be safely teleported back to a random spawn point.
+
+
